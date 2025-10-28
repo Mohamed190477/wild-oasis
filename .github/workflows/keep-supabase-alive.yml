@@ -1,0 +1,14 @@
+name: Keep Supabase Alive by Fetching Image
+
+on:
+  schedule:
+    - cron: '0 0 1,5,9,13,17,21,25,29,30,31 * *' # Every ~4 days + include day 30, 31
+  workflow_dispatch: # Allow manual run
+
+jobs:
+  ping-supabase-storage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl image from Supabase Storage
+        run: |
+          curl -s -o /dev/null https://cdbhwlllygruxffnqvof.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg
