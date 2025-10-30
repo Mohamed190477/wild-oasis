@@ -35,7 +35,7 @@ export default function DashboardLayout() {
       />
       <div>today's activity</div>
       <div>stay durations</div>
-      <SalesChart />
+      <SalesChart bookings={bookings} numDays={numDays} />
     </StyledDashboardLayout>
   );
 }
