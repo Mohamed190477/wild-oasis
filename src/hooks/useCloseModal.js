@@ -10,7 +10,6 @@ export default function useCloseModal(close, exceptionalId = '') {
           if (exceptionalId !== '' && e.target.id === exceptionalId) {
             return;
           }
-          console.log(exceptionalId);
           close();
         }
       }

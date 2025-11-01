@@ -14,7 +14,6 @@ import useGetUser from '../features/authentication/useGetUser';
 export default function ProtectedRoute({ children }) {
   const { user } = useGetUser();
 
-  // console.log(data);
   if (!user) return <Navigate to="/login" replace />;
 
   return children;

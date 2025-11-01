@@ -35,8 +35,6 @@ export default function DurationChart({ confirmedStays }) {
   const startData = darkMode ? START_DATA_DARK : START_DATA_LIGHT;
   const data = prepareData(startData, confirmedStays);
 
-  console.log(data);
-
   return (
     <ChartBox>
       <Heading as="h2">Stay duration summary</Heading>

@@ -59,7 +59,6 @@ export default function Modal({ children }) {
   const [openName, setOpenName] = useState('');
 
   const close = () => {
-    console.log('closed');
     setOpenName('');
   };
 
